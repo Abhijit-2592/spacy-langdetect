@@ -1,5 +1,5 @@
 import pytest
-from spacy_langdetect.spacy_langdetect import LanguageDetector
+from spacy_langdetect import LanguageDetector
 import spacy
 
 
@@ -27,4 +27,3 @@ def test_custom_language_detector():
 
 if __name__ == '__main__':
     pytest.main([__file__])
-    nlp = spacy.load("en")

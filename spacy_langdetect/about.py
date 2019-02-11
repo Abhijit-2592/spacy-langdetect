@@ -1,0 +1,7 @@
+__title__ = 'spacy-langdetect'
+__version__ = '0.1'
+__summary__ = 'spaCy custom pipeline for language detection on Doc and Span objects'
+__url__ = 'https://github.com/Abhijit-2592/spacy-langdetect'
+__author__ = 'Abhijit Balaji'
+__email__ = 'balaabhijit5@gmail.com'
+__license__ = 'Apache'
