@@ -1,0 +1,3 @@
+spacy>=2.0.0
+pytest
+langdetect==1.0.7
