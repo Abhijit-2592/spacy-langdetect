@@ -9,7 +9,7 @@ def _detect_language(spacy_object):
     try:
         detected_language = detect_langs(spacy_object.text)[0]
         return {"language": str(detected_language.lang), "score": float(detected_language.prob)}
-    except LangDetectException as e:
+    except LangDetectException:
         return {"language": "UNKNOWN", "score": 0.0}
 
 
