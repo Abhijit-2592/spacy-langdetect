@@ -14,6 +14,17 @@ def _detect_language(spacy_object):
 
 
 class LanguageDetector(object):
+    """Fully customizable language detection pipeline for spaCy.
+
+    Arguments:
+        language_detection_function: An optional custom language_detection_function. (Default None).
+                                     If None uses, langdetect package to detect language
+
+    # writing a custom language_detection_function:
+        The function must take in a spacy Doc or Span object only as input and can return the detected language.
+        This is stored in Doc._.language and Span._.language attributes.
+    """
+
     def __init__(self, language_detection_function=None):
         if not language_detection_function:
             self._language_detection_function = _detect_language
