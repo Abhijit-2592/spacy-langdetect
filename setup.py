@@ -1,6 +1,6 @@
 import setuptools
 
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
@@ -18,8 +18,5 @@ setuptools.setup(
         "License :: OSI Approved :: Apache License",
         "Operating System :: OS Independent",
     ],
-    install_requires=[
-        'spacy>=2.0.0,',
-        'pytest'
-        'langdetect==1.0.7']
+    install_requires=['spacy>=2.0.0', 'pytest', 'langdetect==1.0.7']
 )
