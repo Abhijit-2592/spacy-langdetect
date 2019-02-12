@@ -1,4 +1,4 @@
-# spacy_langdetect
+# spacy-langdetect
 Fully customizable language detection pipeline for [spaCy](https://github.com/explosion/spaCy)
 
 ## Basic usage
