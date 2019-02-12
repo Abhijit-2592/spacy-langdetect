@@ -15,7 +15,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: Apache License",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
     install_requires=['spacy>=2.0.0', 'pytest', 'langdetect==1.0.7']
