@@ -1,0 +1,25 @@
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="spacy-langdetect",
+    version="0.1",
+    author="Abhijit Balaji",
+    author_email="balaabhijit5@gmail.com",
+    description="Fully customizable language detection pipeline for spaCy",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/Abhijit-2592/spacy-langdetect",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: Apache License",
+        "Operating System :: OS Independent",
+    ],
+    install_requires=[
+        'spacy>=2.0.0,',
+        'pytest'
+        'langdetect==1.0.7']
+)
