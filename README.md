@@ -2,7 +2,7 @@
 Fully customizable language detection pipeline for [spaCy](https://github.com/explosion/spaCy)
 
 ## Installation
-`pip3 install spacy-langdetect`
+`pip install spacy-langdetect`
 
 ## NOTE:
 Requires spaCy >= 2.0. This dependency is removed in `pip install spacy-langdetect`
