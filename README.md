@@ -5,7 +5,7 @@ Fully customizable language detection pipeline for [spaCy](https://github.com/ex
 `pip install spacy-langdetect`
 
 ## NOTE:
-Requires spaCy >= 2.0. This dependency is removed in `pip install spacy-langdetect`
+Requires spaCy >= 2.0. This dependency is removed in `pip install spacy-langdetect` so that it can be used with `nightly` versions also
 
 ## Basic usage
 Out of the box, under the hood it uses [langdetect](https://github.com/Mimino666/langdetect) to detect languages on spaCy's Doc and Span objects.
