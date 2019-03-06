@@ -32,7 +32,7 @@ class LanguageDetector(object):
             self._language_detection_function = language_detection_function
 
     def __call__(self, doc):
-        assert isinstance(doc, Doc), "doc must be an instance of spacy Doc. But got a {}".format()
+        assert isinstance(doc, Doc), "doc must be an instance of spacy Doc. But got a {}".format(type(doc))
         doc.set_extension("language", getter=self._language_detection_function, force=True)
         for sent in doc.sents:
             sent.set_extension("language", getter=self._language_detection_function, force=True)
