@@ -1,11 +1,9 @@
 from langdetect.lang_detect_exception import LangDetectException
 from langdetect import detect_langs
-from spacy.tokens import Doc, Span
+from spacy.tokens import Doc
 
 
 def _detect_language(spacy_object):
-    assert isinstance(spacy_object, Doc) or isinstance(
-        spacy_object, Span), "spacy_object must be a spacy Doc or Span object but it is a {}".format(type(spacy_object))
     try:
         detected_language = detect_langs(spacy_object.text)[0]
         return {"language": str(detected_language.lang), "score": float(detected_language.prob)}
@@ -22,7 +20,7 @@ class LanguageDetector(object):
 
     # writing a custom language_detection_function:
         The function must take in a spacy Doc or Span object only as input and can return the detected language.
-        This is stored in Doc._.language and Span._.language attributes.
+        This is stored in Doc._.language, Span._.language and Token._.language attributes.
     """
 
     def __init__(self, language_detection_function=None):
@@ -36,4 +34,6 @@ class LanguageDetector(object):
         doc.set_extension("language", getter=self._language_detection_function, force=True)
         for sent in doc.sents:
             sent.set_extension("language", getter=self._language_detection_function, force=True)
+        for token in doc:
+            token.set_extension("language", getter=self._language_detection_function, force=True)
         return doc
