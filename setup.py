@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="spacy-langdetect",
-    version="0.1.1",
+    version="0.1.2",
     author="Abhijit Balaji",
     author_email="balaabhijit5@gmail.com",
     description="Fully customizable language detection pipeline for spaCy",
