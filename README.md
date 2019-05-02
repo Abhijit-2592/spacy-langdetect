@@ -22,6 +22,11 @@ print(doc._.language)
 # sentence level language detection
 for i, sent in enumerate(doc.sents):
     print(sent, sent._.language)
+
+# Token level language detection from version 0.1.2
+# Use this with caution because, in some cases language detection will not make sense for individual tokens
+for token in doc:
+    print(token, token._.language)
 ```
 
 ## Using your own language detector
